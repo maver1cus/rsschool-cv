@@ -1,0 +1,65 @@
+.wrapper {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-size:90px;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+}
+.title {
+}
+.contacts {
+  list-style: none;
+  margin: 0 -20px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 550px;
+}
+.contacts__item {
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+.contacts__item--long {
+  margin-right: 2%;
+  flex: 48%;
+}
+.contacts__link {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+.contacts__link span {
+  margin-left: 10px;
+}
+.contacts__link img {
+  width: 30px;
+  height: 30px;
+}
+
+.school-logo {
+  width: 150px;
+  margin: 0 auto;
+}
