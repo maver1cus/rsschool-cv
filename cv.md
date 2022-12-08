@@ -43,4 +43,44 @@ Located in **Moscow, Russia**
   - GitHub
   - Postman
   - Webpack, Gulp
+
+## Code examples
+
+- [питомник-туй.москва](http://xn----otbafdkhgh5agm.xn--80adxhks/)
+- [Game Derby](https://github.com/maver1cus/game-derby)
+- [GTD planer](https://github.com/maver1cus/planner)
+
+```JavaScript
+const jwt = require('jsonwebtoken')
+const status = require('http-status')
+const secret = process.env.SECRET_KEY;
+module.exports = function (req, res, next) {
+  if (req.method === "OPTIONS") {
+    next()
+  }
+  try {
+    const token = req.headers.authorization.split(' ')[1] || null;
+    if (!token) {
+      return res.status(status.FORBIDDEN).json({message: "Пользователь не авторизован"})
+    }
+    const decodedData = jwt.verify(token, secret)
+    req.user = decodedData
+    next()
+  } catch (e) {
+    return res.status(status.FORBIDDEN).json({message: "Пользователь не авторизован"})
+  }
+};
+```
+
+## Education
+
+  - 1998-2002 Alexandrovsky Industrial Humanitarian College
   
+    Operator of computing equipment and automated control systems
+  
+  - 2020 RS School
+  
+    NodeJS 2020 Q3
+
+## English leve
+My level is A1. I am constantly improving my English. I read books, watch you-tube channels and use applications
